@@ -2,13 +2,17 @@ import { initializeBlock } from "@airtable/blocks/ui";
 import React from "react";
 import GettingStarted from "./routes/gettingStarted";
 import AddStudents from "./routes/addStudents";
-import Interventions from "./routes/interventions";
+import RecommendedInterventions from "./routes/recommendedInterventions";
+import Observation from "./routes/observation";
+import StartObservation from "./routes/startObservation";
 import { Router } from "./useRouter";
 
 initializeBlock(() => (
   <Router>
     <GettingStarted to="gettingStarted" />
     <AddStudents to="addStudents" />
-    <Interventions to="interventions" />
+    <RecommendedInterventions to="interventions" />
+    <StartObservation to="startObservation" />
+    <Observation to="observation" />
   </Router>
 ));
