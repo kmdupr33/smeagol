@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Container from "./container";
-import { useRouter } from "./useRouter";
+import Container from "../container";
+import { useRouter } from "../useRouter";
 import {
   useBase,
   Heading,
@@ -11,7 +11,7 @@ import {
   Input,
   Icon,
 } from "@airtable/blocks/ui";
-import { problemBehaviors, createTable } from "./student";
+import { problemBehaviors, createTable } from "../model/student";
 export default function AddStudents() {
   const [students, setStudents] = useState([]);
   const [newStudentName, setNewStudentName] = useState("");

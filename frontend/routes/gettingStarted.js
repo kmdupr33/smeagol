@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading, Text, Button } from "@airtable/blocks/ui";
-import { useRouter } from "./useRouter";
-import Container from "./container";
+import { useRouter } from "../useRouter";
+import Container from "../container";
 
 export default function GettingStarted() {
   const [, setRoute] = useRouter();
