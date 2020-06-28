@@ -12,6 +12,8 @@ import {
   Icon,
 } from "@airtable/blocks/ui";
 import { problemBehaviors, createTable } from "../model/student";
+import Progress from "../progress";
+
 export default function AddStudents() {
   const [students, setStudents] = useState([]);
   const [newStudentName, setNewStudentName] = useState("");
@@ -21,6 +23,10 @@ export default function AddStudents() {
   const [error, setError] = useState(false);
   const [, setRoute] = useRouter();
   const base = useBase();
+  const [loading, setLoading] = useState(false);
+  if (loading) {
+    return <Progress />;
+  }
   return (
     <Container>
       <img
@@ -80,6 +86,7 @@ export default function AddStudents() {
         behavior: newProblemBehavior,
       });
     }
+    setLoading(true);
     await createTable(base, tableStudents);
     setRoute("interventions");
   }
