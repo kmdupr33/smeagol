@@ -88,7 +88,7 @@ export default function AddStudents() {
     }
     setLoading(true);
     await createTable(base, tableStudents);
-    setRoute("interventions");
+    setRoute("recommendedInterventions");
   }
 
   function onAddNewStudent() {

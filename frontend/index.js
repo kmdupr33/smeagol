@@ -11,7 +11,7 @@ initializeBlock(() => (
   <Router>
     <GettingStarted to="gettingStarted" />
     <AddStudents to="addStudents" />
-    <RecommendedInterventions to="interventions" />
+    <RecommendedInterventions to="recommendedInterventions" />
     <StartObservation to="startObservation" />
     <Observation to="observation" />
   </Router>
